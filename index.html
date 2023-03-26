@@ -1,0 +1,22 @@
+<script>
+    async function print() {
+        console.log('a');
+        console.log('b');
+        async function cd() {
+            const c = setTimeout(() => {
+                console.log('c');
+
+            }, 3000);
+            const d = setTimeout(() => {
+                console.log('d');
+
+            }, 0);
+            await Promise.all([c, d]);
+        }
+        await cd();
+        console.log('e');
+    }
+    console.log('start');
+    print();
+    console.log('end');
+</script>
