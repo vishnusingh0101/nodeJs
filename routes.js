@@ -55,4 +55,14 @@ const requestHandler = (req,res) =>{
 }
 
 
-module.exports = requestHandler;
+module.exports = {
+    Handler: requestHandler,
+    someText: 'some text'
+}
+
+// module.exports.Handler = requestHandler;
+// module.exports.someText = 'some text';
+
+// exports.Handler = requestHandler;
+// exports.someText = 'some text';
+
